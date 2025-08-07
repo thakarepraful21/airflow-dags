@@ -13,7 +13,7 @@ default_args = {
 dag = DAG(
     dag_id='test_dag',
     default_args=default_args,
-    description='Simple test DAG',
+    description='Simple testing DAG',
     schedule_interval='@daily',
     catchup=False,
     tags=['example'],
@@ -33,5 +33,5 @@ sleep_task = BashOperator(
     dag=dag,
 )
 
-# Set task dependencies
+# Set task dependencies 123
 print_date >> sleep_task
